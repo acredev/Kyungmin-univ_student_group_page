@@ -15,6 +15,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
 		<link rel="stylesheet" href="/19831049_finalproject/css/join.css">
+		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
 		<title>경민대학교 대나무숲 : 이메일 본인인증</title>
 	</head>
 	<body>

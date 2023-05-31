@@ -17,6 +17,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
 		<title>경민대학교 대나무숲 : 회원가입</title>
 	</head>
 	<body>

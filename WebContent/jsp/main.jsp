@@ -28,7 +28,7 @@
 					<li><a href="bbs.jsp">익명 게시판</a></li>
 					<li><a href="bbs.jsp">Tip 게시판</a></li>
 					<li><a href="bbs.jsp">자료실</a></li>
-					<li><a href="">문의하기</a></li>
+					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
 				</ul>
 				<%
