@@ -43,7 +43,11 @@
 					</div>
 					<input type="submit" class="btn btn-primary form-control" value="로그인"></input>
 					<div style="text-align:center;">
-						<a>아이디 찾기</a> <a>비밀번호 찾기</a>
+						<a onclick="find_id_click()">아이디 찾기</a>
+						<a>|</a>
+						<a>비밀번호 찾기</a>
+						<br>
+						<a href="/19831049_finalproject/jsp/member/join/join.jsp">회원가입</a>
 					</div>
 				</form>
 			</div>
@@ -52,5 +56,6 @@
 	</div>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="/19831049_finalproject/js/bootstrap.js"></script>
+	<script src="/19831049_finalproject/js/find.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
+		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
 		<title>경민대학교 대나무숲 : 메인</title>
 	</head>
 	<body>
@@ -19,11 +20,6 @@
 		
 		<nav class="navbar  navbar-default">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-targetr="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
 				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -40,7 +36,7 @@
 				{%>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/19831049_finalproject/jsp/member/login/Login.jsp">로그인</a></li>
-						<li><a href="join.jsp">회원가입</a></li>
+						<li><a href="/19831049_finalproject/jsp/member/join/join.jsp">회원가입</a></li>
 					</ul>
 				<%
 				}
