@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
 		<link rel="stylesheet" href="/19831049_finalproject/css/login.css">
 		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
-		<title>경민대학교 대나무숲 : 회원가입</title>
+		<title>경민대학교 대나무숲 : 로그인</title>
 	</head>
 	<body>
 		<nav class="navbar  navbar-default">
@@ -17,7 +17,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲 : 로그인</a>
+				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">

@@ -25,7 +25,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="main.jsp">메인</a></li>
-					<li><a href="bbs.jsp">익명 게시판</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
 					<li><a href="bbs.jsp">Tip 게시판</a></li>
 					<li><a href="bbs.jsp">자료실</a></li>
 					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
@@ -43,7 +43,7 @@
 				else
 				{%>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a>마이페이지</a></li>
+						<li><a href="" onclick="mypage_click()">마이페이지</a></li>
 						<li><a href="/19831049_finalproject/jsp/member/login/LogoutAction.jsp">로그아웃</a></li>
 					</ul>
 				<%		
@@ -69,5 +69,6 @@
 		</div>
 		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="/19831049_finalproject/js/bootstrap.js"></script>
+		<script src="/19831049_finalproject/js/main.js"></script>
 	</body>
 </html>
