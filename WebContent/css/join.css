@@ -1,0 +1,16 @@
+a:hover
+{
+	text-decoration: none;
+}
+a#id_chk
+{
+	font-size:12px;
+}
+a#tel_chk
+{
+	font-size:12px;
+}
+a#email_chk
+{
+	font-size:12px;
+}
