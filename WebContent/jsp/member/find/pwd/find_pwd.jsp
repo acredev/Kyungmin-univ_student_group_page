@@ -18,7 +18,7 @@
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 			<div class="jumbotron" style="padding-top:20px;">
-				<form method="post" action="LoginAction.jsp">
+				<form name="find_pwd" method="post" action="find_pwd_second.jsp">
 					<h3 style="text-align:center;">비밀번호 재설정</h3>
 					<h5 style="text-align:center;">비밀번호를 재설정하고자 하는 아이디를 입력해 주세요.</h5>
 					<div class="form-gruop">
@@ -32,5 +32,5 @@
 	</div>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="/19831049_finalproject/js/bootstrap.js"></script>
-</body>
+	</body>
 </html>

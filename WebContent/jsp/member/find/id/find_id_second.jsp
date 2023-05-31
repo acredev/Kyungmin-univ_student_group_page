@@ -1,4 +1,3 @@
-
 <%@page import="find.FindId"%>
 <%@page import="java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

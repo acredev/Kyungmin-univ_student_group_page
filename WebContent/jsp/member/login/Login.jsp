@@ -45,7 +45,7 @@
 					<div style="text-align:center;">
 						<a onclick="find_id_click()">아이디 찾기</a>
 						<a>|</a>
-						<a>비밀번호 찾기</a>
+						<a onclick="find_pwd_click()">비밀번호 찾기</a>
 						<br>
 						<a href="/19831049_finalproject/jsp/member/join/join.jsp">회원가입</a>
 					</div>

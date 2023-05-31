@@ -27,3 +27,32 @@ function find_id_first_click()
 		document.find_id.submit();
 	}
 }
+
+function find_pwd_click()
+{
+		popupWindow = window.open("/19831049_finalproject/jsp/member/find/pwd/find_pwd.jsp", "_blank","resizeable","toolbar=no");
+		popupWindow.resizeTo(500,450);
+		popupWindow.onresize=(_=>{
+			popupWindow.resizeTo(500,450);
+		})
+}
+
+function find_pwd_first_click()
+{
+	var id = document.getElementById("id");
+	
+	if (id.value == "")
+	{
+		alert("아이디가 입력되지 않았습니다. 입력 후 다시 시도 바랍니다.");
+		id.focus();
+	}
+	else
+	{
+		document.find_pwd.submit();
+	}
+}
+
+function find_pwd_result_close()
+{
+	window.close();
+}
