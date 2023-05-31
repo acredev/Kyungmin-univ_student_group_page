@@ -26,7 +26,7 @@ function idchk()
 	}
 	else
 	{
-		popupWindow = window.open("/19831049_finalproject/jsp/member/join_chk/id.jsp?id=" + id.value, "_blank","resizeable","toolbar=no");
+		popupWindow = window.open("/19831049_finalproject/jsp/member/join/chk/id.jsp?id=" + id.value, "_blank","resizeable","toolbar=no");
 		popupWindow.resizeTo(500,400);
 		popupWindow.onresize=(_=>{
 			popupWindow.resizeTo(500,400);
@@ -61,7 +61,7 @@ function telchk()
 	}
 	else
 	{
-		popupWindow = window.open("/19831049_finalproject/jsp/member/join_chk/tel.jsp?tel=" + tel.value, "_blank","resizeable","toolbar=no");
+		popupWindow = window.open("/19831049_finalproject/jsp/member/join/chk/tel.jsp?tel=" + tel.value, "_blank","resizeable","toolbar=no");
 		popupWindow.resizeTo(500,400);
 		popupWindow.onresize=(_=>{
 			popupWindow.resizeTo(500,400);
@@ -91,7 +91,7 @@ function emailchk()
 	}
 	else
 	{
-		popupWindow = window.open("/19831049_finalproject/jsp/member/join_chk/email.jsp?email=" + email.value, "_blank","resizeable","toolbar=no");
+		popupWindow = window.open("/19831049_finalproject/jsp/member/join/chk/email.jsp?email=" + email.value, "_blank","resizeable","toolbar=no");
 		popupWindow.resizeTo(500,400);
 		popupWindow.onresize=(_=>{
 			popupWindow.resizeTo(500,400);
