@@ -38,6 +38,7 @@
 				{%>
 					<script type="text/javascript">
 						alert("로그인 후 이용해 주세요.");
+						location.href="/19831049_finalproject/jsp/member/login/Login.jsp"
 					</script>
 				<%
 				}
@@ -72,6 +73,7 @@
 						
 						if (result.next() == true)
 						{
+							String num = result.getString("num");
 							String name = result.getString("name");
 							String id = result.getString("id");
 							String tel = result.getString("tel");
@@ -81,40 +83,48 @@
 								<div class="col-lg-4"></div>
 								<div class="col-lg-4">
 									<div class="jumbotron" style="padding-top:20px;">
-										<form method="post" action="LoginAction.jsp">
+										<form name="mypage" method="post" action="mypage_Action.jsp">
 											<h3 style="text-align:center;">마이페이지</h3>
 											<div style="text-align:left;">
+												<a>■ 회원번호</a>
+												<input type="text" class="form-control" name="num" id="num" value="<%=num %>" readonly>
+											</div>
+											<div style="text-align:left;">
 												<a>■ 이름</a>
-												<input type="text" class="form-control" value="<%=name %>">
+												<input type="text" class="form-control" name="name" id="name" value="<%=name %>">
 											</div>
 											<div style="text-align:left;">
 												<a>■ 아이디</a>
-												<input type="text" class="form-control" value="<%=id %>" readonly>
+												<input type="text" class="form-control" name="id" id="id" value="<%=id %>" readonly>
 											</div>
 											<div style="text-align:left;">
 												<a>■ 비밀번호</a>
-												<input type="text" class="form-control" placeholder="변경할 비밀번호를 입력해 주세요.">
+												<input type="password" class="form-control" name="pwd" id="pwd" onchange="mypage_pwd_change()" placeholder="변경할 비밀번호를 입력해 주세요.">
 											</div>
 											<div style="text-align:left;">
 												<a>■ 휴대폰 번호</a>
-												<input type="text" class="form-control" value="<%=tel %>" readonly>
+												<input type="text" class="form-control" name="tel" id="tel" value="<%=tel %>" readonly>
 												<input type="submit" class="btn btn-primary form-control" value="휴대폰 번호 변경"></input>
 											</div>
 											<div style="text-align:left;">
 												<a>■ 이메일</a>
-												<input type="text" class="form-control" value="<%=email %>" readonly>
-												<input type="button" class="btn btn-primary form-control" value="이메일 주소 변경"></input>
+												<input type="text" class="form-control" name="email" id="email" value="<%=email %>" readonly>
+												<input type="button" class="btn btn-primary form-control" name="emailchk" id="emailchk" onclick="mypage_email_change_click()" value="이메일 주소 변경"></input>
 												<br>
 											</div>
 											<div style="text-align:left;">
+												<h5>※ 회원번호는 회원가입시 자동 생성됩니다. 변경이 불가능합니다.</h5>
 												<h5>※ 아이디는 변경이 불가능합니다.</h5>
 												<h5>※ 개명 등의 사유가 필요할 경우, 이름 변경이 가능합니다.</h5>
 												<h5>※ 보안적인 이유로 비밀번호는 표시되지 않습니다. 기존 비밀번호를 입력해 주시거나, 새 비밀번호를 입력 후 저장 바랍니다.</h5>
 												<h5>※ 휴대폰 번호와 이메일 주소는 본인인증 후 변경이 가능합니다.</h5>
-												<br>
 											</div>
 											<div>
-												<input type="submit" class="btn btn-primary form-control" value="변경정보 저장"></input>
+												<input type="text" id="isNameChange" name="isNameChange" value="no">
+												<input type="text" id="isPwdChange" name="isPwdChange" value="no">
+												<input type="text" id="isTelChange" name="isTelChange" value="no">
+												<input type="text" id="isEmailChange" name="isEmailChange" value="no">
+												<input type="button" class="btn btn-primary form-control" onclick="mypage_save()" value="변경정보 저장"></input>
 											</div>
 										</form>
 									</div>
@@ -136,6 +146,6 @@
 			
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="/19831049_finalproject/js/bootstrap.js"></script>
-	<script src="/19831049_finalproject/js/find.js"></script>
+	<script src="/19831049_finalproject/js/mypage.js"></script>
 </body>
 </html>

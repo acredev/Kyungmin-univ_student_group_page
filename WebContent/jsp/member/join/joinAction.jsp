@@ -43,7 +43,11 @@
 				psmt.setString (6, email);
 				
 				psmt.executeUpdate();
-				
+				%>
+				<script type="text/javascript">
+					alert("회원가입이 완료되었습니다.");
+				</script>
+				<%
 				response.sendRedirect("/19831049_finalproject/jsp/member/Login.jsp");
 			}
 			catch (Exception ex)
