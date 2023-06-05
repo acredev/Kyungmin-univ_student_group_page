@@ -9,7 +9,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
 		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
-		<title>경민대학교 대나무숲 : Tip 게시판</title>
+		<title>경민대학교 대나무숲 : 자료실 게시판</title>
 		<style type="text/css">
 			a,a:hover{
 				color:#000000;
@@ -25,7 +25,7 @@
 			user_id = (String)session.getAttribute("id");
 		}
 		%>
-	<nav class="navbar  navbar-default">
+		<nav class="navbar  navbar-default">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/19831049_finalproject/jsp/main.jsp">경민대학교 대나무숲</a>
 			</div>
@@ -33,8 +33,8 @@
 				<ul class="nav navbar-nav">
 					<li><a href="/19831049_finalproject/jsp/main.jsp">메인</a></li>
 					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
-					<li class="active"><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
-					<li><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
+					<li class="active"><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
 					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
 				</ul>
@@ -66,12 +66,8 @@
 			String db_username = "root";
 			String db_pwd = "root";
 			Connection connection = DriverManager.getConnection(db_address, db_username, db_pwd);
-			
-			request.setCharacterEncoding("UTF-8");
-			
-			String num = request.getParameter("num");
 				
-			String insertQuery = "SELECT * FROM 19831049_finalproject.board_tip WHERE num=" + num;
+			String insertQuery = "SELECT * FROM 19831049_finalproject.board_data order by num desc";
 				
 			PreparedStatement psmt = connection.prepareStatement(insertQuery);
 			
@@ -79,62 +75,41 @@
 			%>
 			<div class="container">
 				<div class="row">
+				<h3 style="text-align:center;">자료실 게시판</h3>
 					<table class="table table-striped" style="text-align:center;border:1px solid #dddddd">
+						<thead>
+							<tr>
+								<th style="background-color:#eeeeee; text-align:center;">번호</th>
+								<th style="background-color:#eeeeee; text-align:center;">제목</th>
+								<th style="background-color:#eeeeee; text-align:center;">작성자</th>
+								<th style="background-color:#eeeeee; text-align:center;">작성일</th>
+							</tr>
+						</thead>
+					<tbody>	
 					<%
 					while(result.next())
 					{%>
-						<thead>
-							<tr>
-								<th colspan="3" style="background-color:#eeeeee; text-align:center;">게시판 글 보기</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td style="width: 20%;">글 제목</td>
-								<td colspan="2"><%=result.getString("title") %></td>
-							</tr>
-							<tr>
-								<td>작성자</td>
-								<td colspan="2"><%=result.getString("writer") %></td>
-							</tr>
-							<tr>
-								<td>작성 일자</td>
-								<td colspan="2"><%=result.getTimestamp("date") %></td>
-							</tr>
-							<tr>
-								<td>내용</td>
-								<td colspan="2" style="height: 200px; text-align: left;"><%=result.getString("content") %></td>
-							</tr>
-							<tr>
-								<td>첨부사진</td>
-								<td colspan="2">
-									<%
-									if (result.getString("img_route").equals("/19831049_finalproject/img/upload/board/tip_board/null"))
-									{%>
-										이미지 첨부파일이 없습니다.
-									<%
-									}
-									else
-									{%>
-										<img style="width: 50%;"src="<%=result.getString("img_route") %>" alt="로딩오류">
-									<%
-									}%>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<%} %>
-				<a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp" class="btn btn-primary">목록</a>
-				</div>
+						<tr>
+							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getInt("num") %></td>
+							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a></td>
+							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("writer") %></td>
+							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getTimestamp("date") %></td>
+						</tr>
+					<%
+					}%>
+					</tbody>
+				</table>
+				<a href="data_write.jsp" class="btn btn-primary pull-right">글쓰기</a>
 			</div>
-			<%
-			}
-			catch(Exception ex)
-			{
-				out.print(ex.getMessage());
-			}
-			%>
-	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-</body>
+		</div>
+		<%
+		}
+		catch (Exception ex)
+		{
+			out.print(ex.getMessage());
+		}
+		%>
+		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
 </html>

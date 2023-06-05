@@ -19,20 +19,15 @@
 		%>
 		<nav class="navbar  navbar-default">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-targetr="#bs-example-navbar-collapse-1" aria-expanded="false">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/19831049_finalproject/jsp/main.jsp">경민대학교 대나무숲</a>
+				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="/19831049_finalproject/jsp/main.jsp">메인</a></li>
-					<li><a href="bbs.jsp">익명 게시판</a></li>
-					<li><a href="bbs.jsp">Tip 게시판</a></li>
-					<li><a href="bbs.jsp">자료실</a></li>
-					<li class="active"><a href="">문의하기</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
+					<li class="active"><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
 				</ul>
 				<%

@@ -5,19 +5,18 @@
 <%@ page  import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
-		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
-		<title>경민대학교 대나무숲 : Tip 게시판</title>
-		<style type="text/css">
-			a,a:hover{
-				color:#000000;
-				text-decoration:none;
-			}
-		</style>
-	</head>
-	<body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
+<title>경민대학교 대나무숲 : 메인</title>
+<style type="text/css">
+	a,a:hover{
+		color:#000000;
+		text-decoration:none;
+	}
+</style>
+</head>
+<body>
 		<%
 		String user_id = null;
 		if (session.getAttribute("id") != null)
@@ -25,15 +24,15 @@
 			user_id = (String)session.getAttribute("id");
 		}
 		%>
-		<nav class="navbar  navbar-default">
+	<nav class="navbar  navbar-default">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/19831049_finalproject/jsp/main.jsp">경민대학교 대나무숲</a>
+				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="/19831049_finalproject/jsp/main.jsp">메인</a></li>
-					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
-					<li class="active"><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
+					<li class="active"><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
 					<li><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
 					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
@@ -67,7 +66,7 @@
 			String db_pwd = "root";
 			Connection connection = DriverManager.getConnection(db_address, db_username, db_pwd);
 				
-			String insertQuery = "SELECT * FROM 19831049_finalproject.board_tip order by num desc";
+			String insertQuery = "SELECT * FROM 19831049_finalproject.board_anonymous order by num desc";
 				
 			PreparedStatement psmt = connection.prepareStatement(insertQuery);
 			
@@ -75,7 +74,7 @@
 			%>
 			<div class="container">
 				<div class="row">
-				<h3 style="text-align:center;">Tip 게시판</h3>
+					<h3 style="text-align:center;">익명 게시판</h3>
 					<table class="table table-striped" style="text-align:center;border:1px solid #dddddd">
 						<thead>
 							<tr>
@@ -90,16 +89,16 @@
 					while(result.next())
 					{%>
 						<tr>
-							<td><a href="tip_read.jsp?num=<%=result.getInt("num") %>"><%=result.getInt("num") %></td>
-							<td><a href="tip_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a></td>
-							<td><a href="tip_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("writer") %></td>
-							<td><a href="tip_read.jsp?num=<%=result.getInt("num") %>"><%=result.getTimestamp("date") %></td>
+							<td><a href="anonymous_read.jsp?num=<%=result.getInt("num") %>"><%=result.getInt("num") %></td>
+							<td><a href="anonymous_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a></td>
+							<td><a href="anonymous_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("writer") %></td>
+							<td><a href="anonymous_read.jsp?num=<%=result.getInt("num") %>"><%=result.getTimestamp("date") %></td>
 						</tr>
 					<%
 					}%>
 					</tbody>
 				</table>
-				<a href="tip_write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+				<a href="anonymous_write.jsp" class="btn btn-primary pull-right">글쓰기</a>
 			</div>
 		</div>
 		<%
@@ -109,7 +108,7 @@
 			out.print(ex.getMessage());
 		}
 		%>
-		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-	</body>
+	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</body>
 </html>

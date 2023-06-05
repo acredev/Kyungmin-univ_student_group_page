@@ -9,7 +9,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
 		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
-		<title>경민대학교 대나무숲 : Tip 게시판</title>
+		<title>경민대학교 대나무숲 : 자료실 게시판</title>
 		<style type="text/css">
 			a,a:hover{
 				color:#000000;
@@ -33,8 +33,8 @@
 				<ul class="nav navbar-nav">
 					<li><a href="/19831049_finalproject/jsp/main.jsp">메인</a></li>
 					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
-					<li class="active"><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
-					<li><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
+					<li class="active"><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
 					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
 				</ul>
@@ -71,7 +71,7 @@
 			
 			String num = request.getParameter("num");
 				
-			String insertQuery = "SELECT * FROM 19831049_finalproject.board_tip WHERE num=" + num;
+			String insertQuery = "SELECT * FROM 19831049_finalproject.board_data WHERE num=" + num;
 				
 			PreparedStatement psmt = connection.prepareStatement(insertQuery);
 			
@@ -106,17 +106,19 @@
 								<td colspan="2" style="height: 200px; text-align: left;"><%=result.getString("content") %></td>
 							</tr>
 							<tr>
-								<td>첨부사진</td>
+								<td>첨부파일</td>
 								<td colspan="2">
 									<%
-									if (result.getString("img_route").equals("/19831049_finalproject/img/upload/board/tip_board/null"))
+									if (result.getString("data_route").equals("/19831049_finalproject/data/upload/board/data_board/null"))
 									{%>
-										이미지 첨부파일이 없습니다.
+										첨부파일이 없습니다.
 									<%
 									}
 									else
 									{%>
-										<img style="width: 50%;"src="<%=result.getString("img_route") %>" alt="로딩오류">
+										<a style="color: blue; text-decoration: underline;" href="<%=result.getString("data_route") %>"><%=result.getString("data_realName") %>
+											<img src="/19831049_finalproject/img/download.png" style="height:18px;">
+										</a>
 									<%
 									}%>
 								</td>
@@ -124,7 +126,7 @@
 						</tbody>
 					</table>
 					<%} %>
-				<a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp" class="btn btn-primary">목록</a>
+				<a href="/19831049_finalproject/jsp/board/data/data_board.jsp" class="btn btn-primary">목록</a>
 				</div>
 			</div>
 			<%

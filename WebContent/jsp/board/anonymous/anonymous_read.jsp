@@ -9,7 +9,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
 		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
-		<title>경민대학교 대나무숲 : Tip 게시판</title>
+		<title>경민대학교 대나무숲 : 익명 게시판</title>
 		<style type="text/css">
 			a,a:hover{
 				color:#000000;
@@ -27,13 +27,13 @@
 		%>
 	<nav class="navbar  navbar-default">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/19831049_finalproject/jsp/main.jsp">경민대학교 대나무숲</a>
+				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="/19831049_finalproject/jsp/main.jsp">메인</a></li>
-					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
-					<li class="active"><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
+					<li><a href="main.jsp">메인</a></li>
+					<li class="active"><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
 					<li><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
 					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
@@ -71,7 +71,7 @@
 			
 			String num = request.getParameter("num");
 				
-			String insertQuery = "SELECT * FROM 19831049_finalproject.board_tip WHERE num=" + num;
+			String insertQuery = "SELECT * FROM 19831049_finalproject.board_anonymous WHERE num=" + num;
 				
 			PreparedStatement psmt = connection.prepareStatement(insertQuery);
 			
@@ -105,20 +105,25 @@
 								<td>내용</td>
 								<td colspan="2" style="height: 200px; text-align: left;"><%=result.getString("content") %></td>
 							</tr>
+						</tbody>
+					</table>
+					<table class="table table-striped" style="text-align:center;border:1px solid #dddddd">
+						<thead>
 							<tr>
-								<td>첨부사진</td>
+								<th colspan="3" style="background-color:#eeeeee; text-align:center;">댓글</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>댓글 입니다 댓글 입니다 댓글 입니다</td>
+							</tr>
+							<tr>
+								<td>댓글</td>
+							</tr>
+							<tr>
 								<td colspan="2">
-									<%
-									if (result.getString("img_route").equals("/19831049_finalproject/img/upload/board/tip_board/null"))
-									{%>
-										이미지 첨부파일이 없습니다.
-									<%
-									}
-									else
-									{%>
-										<img style="width: 50%;"src="<%=result.getString("img_route") %>" alt="로딩오류">
-									<%
-									}%>
+									<textarea class="form-control" placeholder="새로운 댓글을 작성해 주세요." name="content" maxlength="350" style="height:80px;"></textarea>
+									<input type="button" class="btn btn-primary pull-right" value="댓글작성">
 								</td>
 							</tr>
 						</tbody>

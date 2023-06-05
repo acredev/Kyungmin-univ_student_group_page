@@ -20,13 +20,13 @@
 		
 		<nav class="navbar  navbar-default">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/19831049_finalproject/jsp/main.jsp">경민대학교 대나무숲</a>
+				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="/19831049_finalproject/jsp/main.jsp">메인</a></li>
-					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
-					<li class="active"><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
+					<li><a href="main.jsp">메인</a></li>
+					<li class="active"><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
 					<li><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
 					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
@@ -52,11 +52,11 @@
 		</nav>
 	<div class="container">
 		<div class="row">
-		<form method="post" action="tip_writeAction.jsp" enctype="multipart/form-data">
+		<form method="post" action="anonymous_writeAction.jsp">
 			<table class="table table-striped" style="text-align:center;border:1px solid #dddddd">
 				<thead>
 					<tr>
-						<th colspan="2" style="background-color:#eeeeee; text-align:center;">Tip 게시판 글쓰기</th>
+						<th colspan="2" style="background-color:#eeeeee; text-align:center;">익명 게시판 글쓰기</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -71,8 +71,6 @@
 					</tr>
 				</tbody>
 			</table>
-			<p>* 최대 100M 까지의 이미지 파일만 첨부 가능합니다.</p>
-			<input type="file" accept="image/*" class="btn btn-primary pull-left" name="tip_img">
 			<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
 		</form>
 		</div>

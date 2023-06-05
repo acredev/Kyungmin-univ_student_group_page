@@ -27,7 +27,7 @@
 					<li class="active"><a href="main.jsp">메인</a></li>
 					<li><a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp">익명 게시판</a></li>
 					<li><a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp">Tip 게시판</a></li>
-					<li><a href="bbs.jsp">자료실</a></li>
+					<li><a href="/19831049_finalproject/jsp/board/data/data_board.jsp">자료실</a></li>
 					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
 					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
 				</ul>
@@ -58,9 +58,9 @@
 						<h1>경민대학교 대나무숲</h1>
 						<p>경민대학교 대나무숲에 오신 것을 환영합니다!</p>
 						<p>
-							<a class="btn btn-primary btn-pull" href="https://acredev.tistory.com/" role="button">익명<br>게시판</a>
-							<a class="btn btn-primary btn-pull" href="https://instagram.com/dailylife_lmh" role="button">Tip<br>게시판</a>
-							<a class="btn btn-primary btn-pull" href="https://github.com/acredev" role="button">자료실<br>게시판</a><br>
+							<a class="btn btn-primary btn-pull" href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp" role="button">익명<br>게시판</a>
+							<a class="btn btn-primary btn-pull" href="/19831049_finalproject/jsp/board/tip/tip_board.jsp" role="button">Tip<br>게시판</a>
+							<a class="btn btn-primary btn-pull" href="/19831049_finalproject/jsp/board/data/data_board.jsp" role="button">자료실<br>게시판</a><br>
 						</p>
 						<p>
 							<a class="btn btn-primary form-control" href="/19831049_finalproject/jsp/member/login/Login.jsp" role="button" style="width: 15%">로그인</a>
