@@ -150,7 +150,7 @@
 						</tbody>
 					</table>
 					<%} %>
-				<a href="/19831049_finalproject/jsp/board/tip/tip_board.jsp" class="btn btn-primary">목록</a>
+				<a href="/19831049_finalproject/jsp/board/anonymous/anonymous_board.jsp" class="btn btn-primary">목록</a>
 				</div>
 			</div>
 			<%

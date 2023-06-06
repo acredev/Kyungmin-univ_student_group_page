@@ -71,12 +71,12 @@
 					</tr>
 				</tbody>
 			</table>
+			<p>* 최대 1GB 까지의 파일만 첨부 가능합니다.</p>
 			<input type="file" class="btn btn-primary pull-left" name="data_file">
 			<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
 		</form>
 		</div>
 	</div>
-	
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>

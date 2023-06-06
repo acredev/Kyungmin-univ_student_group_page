@@ -42,7 +42,7 @@ try
 		uploadDir = uploadDir.substring(1, uploadDir.indexOf(".metadata")) + "19831049_finalproject/WebContent/data/upload/board/data_board";
 		
 		//총 100M 까지 저장
-		int maxSize = 1024 * 1024 * 100;
+		int maxSize = 1024 * 1024 * 1024;
 		String encoding = "UTF-8";
 		
 		MultipartRequest multipartRequest = new MultipartRequest(request, uploadDir, maxSize, encoding, new DefaultFileRenamePolicy());
