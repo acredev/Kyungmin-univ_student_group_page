@@ -21,7 +21,7 @@
 		<div class="col-lg-4">
 			<div class="jumbotron" style="padding-top:20px;">
 				<form name="tel" action="telchk.jsp" method="post">
-					<h2 style="text-align:center;">휴대폰 변경</h2>
+					<h2 style="text-align:center;">휴대폰 번호 변경</h2>
 					<div class="form-gruop">
 						<p>
 							<input type="text" class="form-control" placeholder="휴대폰 번호" name="tel" id="tel" maxlength="13">

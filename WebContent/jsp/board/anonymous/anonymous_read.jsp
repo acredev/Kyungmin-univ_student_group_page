@@ -114,16 +114,37 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>댓글 입니다 댓글 입니다 댓글 입니다</td>
-							</tr>
-							<tr>
-								<td>댓글</td>
-							</tr>
+						<%
+						try
+						{
+							insertQuery = "SELECT * FROM 19831049_finalproject.comment_anonymous WHERE post_num=" + num;
+							
+							PreparedStatement psmt_comment = connection.prepareStatement(insertQuery);
+							
+							ResultSet result_comment = psmt_comment.executeQuery();
+							
+							while (result_comment.next())
+							{%>
+								<tr>
+									<td>익명<%=result_comment.getString("writer") %></td>
+									<td><%=result_comment.getString("content") %></td>
+								</tr>
+							<%
+							}
+						}
+						catch (Exception ex)
+						{
+							ex.getMessage();
+						}
+						%>
 							<tr>
 								<td colspan="2">
-									<textarea class="form-control" placeholder="새로운 댓글을 작성해 주세요." name="content" maxlength="350" style="height:80px;"></textarea>
-									<input type="button" class="btn btn-primary pull-right" value="댓글작성">
+									<form name="comment" action="anonymous_commentAction.jsp" method="post">
+										<textarea class="form-control" placeholder="새로운 댓글을 작성해 주세요." name="content" id="content" maxlength="350" style="height:80px;"></textarea>
+										<input type="button" class="btn btn-primary pull-right" onclick="comment_click()" value="댓글작성">
+										<!-- 글번호 -->
+										<input type="hidden" id="post_num" name="post_num" value="<%=result.getString("num") %>">
+									</form>
 								</td>
 							</tr>
 						</tbody>
@@ -140,6 +161,7 @@
 			}
 			%>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="/19831049_finalproject/js/bootstrap.js"></script>
+	<script src="/19831049_finalproject/js/comment.js"></script>
 </body>
 </html>

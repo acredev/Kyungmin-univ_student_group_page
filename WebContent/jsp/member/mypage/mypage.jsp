@@ -91,7 +91,7 @@
 											</div>
 											<div style="text-align:left;">
 												<a>■ 이름</a>
-												<input type="text" class="form-control" name="name" id="name" value="<%=name %>">
+												<input type="text" class="form-control" name="name" id="name" value="<%=name %>" maxlength="5">
 											</div>
 											<div style="text-align:left;">
 												<a>■ 아이디</a>
@@ -99,12 +99,12 @@
 											</div>
 											<div style="text-align:left;">
 												<a>■ 비밀번호</a>
-												<input type="password" class="form-control" name="pwd" id="pwd" onchange="mypage_pwd_change()" placeholder="변경할 비밀번호를 입력해 주세요.">
+												<input type="password" class="form-control" name="pwd" id="pwd" onchange="mypage_pwd_change()" placeholder="변경할 비밀번호를 입력해 주세요." maxlength="20">
 											</div>
 											<div style="text-align:left;">
 												<a>■ 휴대폰 번호</a>
 												<input type="text" class="form-control" name="tel" id="tel" value="<%=tel %>" readonly>
-												<input type="submit" class="btn btn-primary form-control" value="휴대폰 번호 변경"></input>
+												<input type="button" class="btn btn-primary form-control" name="telchk" id="telchk" onclick="mypage_tel_change_click()" value="휴대폰 번호 변경"></input>
 											</div>
 											<div style="text-align:left;">
 												<a>■ 이메일</a>
@@ -120,10 +120,10 @@
 												<h5>※ 휴대폰 번호와 이메일 주소는 본인인증 후 변경이 가능합니다.</h5>
 											</div>
 											<div>
-												<input type="text" id="isNameChange" name="isNameChange" value="no">
-												<input type="text" id="isPwdChange" name="isPwdChange" value="no">
-												<input type="text" id="isTelChange" name="isTelChange" value="no">
-												<input type="text" id="isEmailChange" name="isEmailChange" value="no">
+												<input type="hidden" id="isNameChange" name="isNameChange" value="no">
+												<input type="hidden" id="isPwdChange" name="isPwdChange" value="no">
+												<input type="hidden" id="isTelChange" name="isTelChange" value="no">
+												<input type="hidden" id="isEmailChange" name="isEmailChange" value="no">
 												<input type="button" class="btn btn-primary form-control" onclick="mypage_save()" value="변경정보 저장"></input>
 											</div>
 										</form>
@@ -140,7 +140,7 @@
 					}
 					catch (Exception ex)
 					{
-						
+						out.print(ex.getMessage());
 					}
 				}%>
 			
