@@ -25,12 +25,27 @@
 * Web
 
 ## 🕒 개발기간
-* 개발 : 2023. 05. 30 ~ 진행중
-* 테스트 : 개발진행중
+* 개발 : 2023. 05. 30 ~ 2023. 06. 06
+* 테스트 : 2023. 06. 01 ~ 2023. 06. 06
 
 ## 💾 ERD 설계도
-* 개발진행중
+* 작성중
 
 ## 🌏 WEB 페이지 구성
-* 개발진행중
+* 작성중
 ![image](https://github.com/acredev/Kyungmin_univ_group_page/assets/3482382/a389f9d4-a178-456c-b887-d23b1c5b4e7d)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/968c3f11-522b-4480-bda0-78d8c39c32aa)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/b05c6672-f858-4d4a-978d-743768568f9b)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/de853219-c188-40d2-9860-f01ebd5e0c60)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/5706806e-23b0-4055-a727-cf99cb3560ce)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/7728f1f9-de22-48c1-9bb0-1d3a4f4260d4)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/afe90f33-8689-40c7-b513-ebcbdadf06bd)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/5639e206-95fa-48e0-84fc-6594495a05c2)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/9da7f3bc-3a7c-4b7b-8cd1-c445cb724b4f)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/15db1e7f-8b9d-4d10-ac07-ab2756ec6775)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/3507026a-f47f-43d4-a188-660acb26adf3)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/1b40c6f7-a302-4bbc-b54a-cd2b10242123)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/55ba2386-a7fa-44ec-a688-65e7f074ce6d)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/1c45fa13-b719-4265-a428-7be1694c5401)
+![image](https://github.com/acredev/Kyungmin-univ_student_group_page/assets/3482382/2d1f5535-b3ed-4ce5-a7d1-752cd50eb286)
+
