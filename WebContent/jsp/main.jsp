@@ -63,9 +63,18 @@
 							<a class="btn btn-primary btn-pull" href="/19831049_finalproject/jsp/board/data/data_board.jsp" role="button">자료실<br>게시판</a><br>
 						</p>
 						<p>
-							<a class="btn btn-primary form-control" href="/19831049_finalproject/jsp/member/login/Login.jsp" role="button" style="width: 15%">로그인</a>
-							<a class="btn btn-primary form-control" href="/19831049_finalproject/jsp/member/join/join.jsp" role="button" style="width: 15%">회원가입</a>
-						</p>
+							<%
+							if(user_id == null)
+							{%>
+								<a class="btn btn-primary form-control" href="/19831049_finalproject/jsp/member/login/Login.jsp" role="button" style="width: 15%">로그인</a>
+								<a class="btn btn-primary form-control" href="/19831049_finalproject/jsp/member/join/join.jsp" role="button" style="width: 15%">회원가입</a>
+							<%
+							}
+							else
+							{%>
+							<%		
+							}%>
+							</p>
 						<p style="font-size:15px; color:grey;">Project dev. 19831049 이민혁</p>
 					</div>
 				</div>

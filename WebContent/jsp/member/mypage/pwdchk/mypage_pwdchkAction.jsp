@@ -65,6 +65,6 @@
 		}
 		catch (Exception ex)
 		{
-			
+			out.print(ex.getMessage());
 		}
 %>

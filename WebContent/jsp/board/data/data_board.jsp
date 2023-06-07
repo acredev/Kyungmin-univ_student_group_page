@@ -41,6 +41,10 @@
 				<%
 				if(user_id == null)
 				{%>
+					<script type="text/javascript">
+						alert("게시판 접근권한이 없습니다. 회원이시면 로그인 후 접근 바라며, 비회원일 경우 회원가입 후 이용해 주세요.");
+						location.href="/19831049_finalproject/jsp/main.jsp";
+					</script>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/19831049_finalproject/jsp/member/login/Login.jsp">로그인</a></li>
 						<li><a href="/19831049_finalproject/jsp/member/join/join.jsp">회원가입</a></li>
@@ -83,6 +87,7 @@
 								<th style="background-color:#eeeeee; text-align:center;">제목</th>
 								<th style="background-color:#eeeeee; text-align:center;">작성자</th>
 								<th style="background-color:#eeeeee; text-align:center;">작성일</th>
+								<th style="background-color:#eeeeee; text-align:center;">글 관리</th>
 							</tr>
 						</thead>
 					<tbody>	
@@ -90,10 +95,33 @@
 					while(result.next())
 					{%>
 						<tr>
-							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getInt("num") %></td>
-							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a></td>
-							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("writer") %></td>
-							<td><a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getTimestamp("date") %></td>
+							<td>
+								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getInt("num") %></a>
+							</td>
+							<td>
+								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a>
+							</td>
+							<td>
+								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("writer") %>
+							</td>
+							<td>
+								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getTimestamp("date") %>
+							</td>
+							<td>
+								<%
+								if (result.getString("writer").equals(user_id))
+								{%>
+									<a href="data_modify.jsp?num=<%=result.getInt("num") %>">수정</a>
+									<a> | </a>
+ 									<a href="/19831049_finalproject/jsp/board/data/data_deleteAction.jsp?num=<%=result.getString("num") %>">삭제</a>
+								<%
+								}
+								else
+								{%>
+									<a></a>
+								<%
+								}%>
+							</td>
 						</tr>
 					<%
 					}%>
@@ -110,6 +138,7 @@
 		}
 		%>
 		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
+		<script src="/19831049_finalproject/js/data_board.js"></script>
+		<script src="/19831049_finalproject/js/bootstrap.js"></script>
 	</body>
 </html>

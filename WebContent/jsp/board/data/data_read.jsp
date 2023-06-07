@@ -41,6 +41,10 @@
 				<%
 				if(user_id == null)
 				{%>
+					<script type="text/javascript">
+						alert("게시판 접근권한이 없습니다. 회원이시면 로그인 후 접근 바라며, 비회원일 경우 회원가입 후 이용해 주세요.");
+						location.href="/19831049_finalproject/jsp/main.jsp";
+					</script>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/19831049_finalproject/jsp/member/login/Login.jsp">로그인</a></li>
 						<li><a href="/19831049_finalproject/jsp/member/join/join.jsp">회원가입</a></li>
@@ -137,6 +141,6 @@
 			}
 			%>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+	<script src="/19831049_finalproject/js/bootstrap.js"></script>
 </body>
 </html>
