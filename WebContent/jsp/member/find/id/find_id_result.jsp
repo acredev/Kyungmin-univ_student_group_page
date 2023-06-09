@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
 		<link rel="stylesheet" href="/19831049_finalproject/css/login.css">
 		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
-		<title>경민대학교 대나무숲 : 회원가입</title>
+		<title>경민대학교 대나무숲 : 아이디 찾기</title>
 	</head>
 	<body>
 	<%

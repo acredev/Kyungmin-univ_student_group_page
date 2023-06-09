@@ -111,5 +111,6 @@
 		%>
 		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="/19831049_finalproject/js/bootstrap.js"></script>
+		<script src="/19831049_finalproject/js/main.js"></script>
 	</body>
 </html>
