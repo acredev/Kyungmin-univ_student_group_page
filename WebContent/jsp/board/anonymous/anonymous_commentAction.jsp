@@ -18,10 +18,10 @@ try
     String post_num = request.getParameter("post_num");
     String content = request.getParameter("content");
     
-		// 게시글 번호를 결정하기 위한 임시 정수형 변수 선언
+		// 댓글 번호를 결정하기 위한 임시 정수형 변수 선언
 		int writer = 0;
 	
-		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (현재 등록된 게시글의 갯수를 파악)
+		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (현재 등록된 댓글의 갯수를 파악)
 		String insertQuery = "SELECT MAX(writer) from 19831049_finalproject.comment_anonymous WHERE post_num=?";
 	
 		// SQL 쿼리문을 실행 (MySQL로 전송)하기 위한 객체 선언
@@ -39,7 +39,7 @@ try
 	    writer = result.getInt("MAX(writer)") + 1;
 		}
 		
-		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (사용자가 post_new.jsp 폼에서 작성한 정보를 전송)
+		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (사용자가 댓글에서 작성한 정보를 전송)
 		insertQuery = "INSERT INTO 19831049_finalproject.comment_anonymous(post_num, writer, content) VALUES (?, ?, ?)";
 		
 		// SQL 쿼리문을, 새로운 내용을 토대로 재실행
@@ -53,7 +53,7 @@ try
 		// INSERT 하여 반영된 레코드의 건수결과를 반환
 		psmt.executeUpdate();
 	
-		// 모두 완료되면, post_list.jsp(글 목록) 폼으로 되돌아 온다.
+		// 모두 완료되면 alert로 알림
 		%>
 		<script type="text/javascript">
 			alert("작성이 완료되었습니다.")

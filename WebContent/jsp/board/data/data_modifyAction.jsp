@@ -33,7 +33,7 @@ try
 		String writer = multipartRequest.getParameter("writer");
 		String title = multipartRequest.getParameter("title");
 		String content = multipartRequest.getParameter("content");
-		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (사용자가 post_new.jsp 폼에서 작성한 정보를 전송)
+		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (사용자가신규 게시글 작성한 정보를 전송)
 		String insertQuery = "UPDATE 19831049_finalproject.board_data set title=?, content=?, date=?, data_name=?, data_realName=?, data_route=? WHERE num=" + num;
 		
 	// SQL 쿼리문을, 새로운 내용을 토대로 재실행
@@ -50,7 +50,7 @@ try
 	// INSERT 하여 반영된 레코드의 건수결과를 반환
 	psmt.executeUpdate();
 	
-	// 모두 완료되면, post_list.jsp(글 목록) 폼으로 되돌아 온다.
+	// 모두 완료되면 되돌아옴
 	response.sendRedirect("data_board.jsp");
 }
 catch (Exception ex)

@@ -4,14 +4,14 @@
     pageEncoding="UTF-8"%>
     
 <%
-    	request.setCharacterEncoding("UTF-8");
-        	String id = request.getParameter("id");
-        	String email = request.getParameter("email");
+  	request.setCharacterEncoding("UTF-8");
+   	String id = request.getParameter("id");
+   	String email = request.getParameter("email");
         	
-        	FindPwd findpwd = new FindPwd();
+   	FindPwd findpwd = new FindPwd();
         	
-        	int chknum = findpwd.chkmailSend(email);
-    %>
+   	int chknum = findpwd.chkmailSend(email);
+%>
 
 <!DOCTYPE html>
 <html>

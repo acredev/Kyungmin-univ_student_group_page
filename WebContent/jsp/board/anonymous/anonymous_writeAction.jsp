@@ -41,7 +41,7 @@ try
 		String writer = request.getParameter("writer");
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (사용자가 post_new.jsp 폼에서 작성한 정보를 전송)
+		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (사용자가 신규 게시글 작성한 정보를 전송)
 		insertQuery = "INSERT INTO 19831049_finalproject.board_anonymous(num, title, writer, content, date) VALUES (?, ?, ?, ?, ?)";
 		
 	// SQL 쿼리문을, 새로운 내용을 토대로 재실행
@@ -57,7 +57,7 @@ try
 	// INSERT 하여 반영된 레코드의 건수결과를 반환
 	psmt.executeUpdate();
 	
-	// 모두 완료되면, post_list.jsp(글 목록) 폼으로 되돌아 온다.
+	// 모두 완료되면 alert 알림
 	%>
 	<script type="text/javascript">
 		alert("작성이 완료되었습니다.")

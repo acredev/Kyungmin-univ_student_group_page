@@ -15,7 +15,7 @@ try
     request.setCharacterEncoding("UTF-8");
 		String num = request.getParameter("num");
 	
-		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (현재 등록된 게시글의 갯수를 파악)
+		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (게시글 넘버를 전송해 해당 게시글 정보를 삭제)
 		String insertQuery = "DELETE FROM 19831049_finalproject.board_data WHERE num=" + num;
 	
 		// SQL 쿼리문을 실행 (MySQL로 전송)하기 위한 객체 선언
@@ -23,7 +23,7 @@ try
 	
 		psmt.executeUpdate();
 	
-	// 모두 완료되면, post_list.jsp(글 목록) 폼으로 되돌아 온다.
+	// 모두 완료되면, alert 알림
 	%>
 	<script>
 		alert("게시글 삭제가 완료되었습니다.");

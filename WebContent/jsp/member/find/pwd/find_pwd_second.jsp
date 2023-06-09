@@ -75,7 +75,7 @@
 	}
 	catch (Exception ex)
 	{
-		
+		out.print(ex.getMessage());
 	}
 	%>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>

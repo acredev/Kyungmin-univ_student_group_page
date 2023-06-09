@@ -22,7 +22,7 @@ try
 
 	request.setCharacterEncoding("UTF-8");
 
-	// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (현재 등록된 게시글의 갯수를 파악)
+	// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (게시글 작성자를 파악)
 	String insertQuery = "DELETE FROM 19831049_finalproject.board_data WHERE writer=?";
 
 	// SQL 쿼리문을 실행 (MySQL로 전송)하기 위한 객체 선언
