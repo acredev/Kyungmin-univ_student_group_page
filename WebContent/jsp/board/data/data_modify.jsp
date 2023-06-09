@@ -96,9 +96,9 @@
 							</tr>
 						</tbody>
 					</table>
-					<input type="hidden" name="num" value="<%=num %>">;
+					<input type="hidden" name="num" value="<%=num %>">
 					<p>* 최대 1GB 까지의 파일만 첨부 가능합니다.</p>
-					<input type="file" class="btn btn-primary pull-left" name="data_file">
+					<p style="color: red;">* 첨부파일은 수정할 수 없습니다. 필요할 경우, 게시글을 삭제 후 재등록 해 주세요.</p>
 					<input type="submit" class="btn btn-primary pull-right" value="수정">
 				</form>
 				</div>

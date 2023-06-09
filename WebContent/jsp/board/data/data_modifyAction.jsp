@@ -34,7 +34,7 @@ try
 		String title = multipartRequest.getParameter("title");
 		String content = multipartRequest.getParameter("content");
 		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (사용자가신규 게시글 작성한 정보를 전송)
-		String insertQuery = "UPDATE 19831049_finalproject.board_data set title=?, content=?, date=?, data_name=?, data_realName=?, data_route=? WHERE num=" + num;
+		String insertQuery = "UPDATE 19831049_finalproject.board_data set title=?, content=?, date=? WHERE num=" + num;
 		
 	// SQL 쿼리문을, 새로운 내용을 토대로 재실행
 	PreparedStatement psmt = connection.prepareStatement(insertQuery);
@@ -43,9 +43,6 @@ try
 	psmt.setString(1, title);
 	psmt.setString(2, content);
 	psmt.setTimestamp(3, today_date);
-	psmt.setString(4, fileName);
-	psmt.setString(5, fileRealName);
-	psmt.setString(6, "/19831049_finalproject/data/upload/board/data_board/" + fileRealName);
 	
 	// INSERT 하여 반영된 레코드의 건수결과를 반환
 	psmt.executeUpdate();
