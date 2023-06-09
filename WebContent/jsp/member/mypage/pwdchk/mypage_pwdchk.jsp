@@ -39,8 +39,8 @@
 							<input type="submit" class="btn btn-primary form-control" value="비밀번호 확인">
 						</p>
 					</div>
-					</form>
-					</div>
+				</form>
+			</div>
 			<div class="col-lg-4"></div>
 		</div>
 	</div>

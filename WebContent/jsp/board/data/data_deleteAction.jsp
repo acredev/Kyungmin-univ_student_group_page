@@ -26,10 +26,11 @@ try
 	// 모두 완료되면, post_list.jsp(글 목록) 폼으로 되돌아 온다.
 	%>
 	<script>
-		alert("작성이 완료되었습니다.")
+		alert("게시글 삭제가 완료되었습니다.");
+		close();
+		window.opener.document.location.reload();
 	</script>
 	<%
-	response.sendRedirect("data_board.jsp");
 }
 catch (Exception ex)
 {

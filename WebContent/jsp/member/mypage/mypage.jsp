@@ -25,14 +25,6 @@
 				<a class="navbar-brand" href="main.jsp">경민대학교 대나무숲</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="/19831049_finalproject/jsp/main.jsp">메인</a></li>
-					<li><a href="bbs.jsp">익명 게시판</a></li>
-					<li><a href="bbs.jsp">Tip 게시판</a></li>
-					<li><a href="bbs.jsp">자료실</a></li>
-					<li><a href="/19831049_finalproject/jsp/cs/cs.jsp">문의하기</a></li>
-					<li><a href="/19831049_finalproject/jsp/etc/about.jsp">프로젝트에 대하여...</a></li>
-				</ul>
 				<%
 				if(user_id == null)
 				{%>

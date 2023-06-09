@@ -97,6 +97,7 @@
 						<tr>
 							<td>
 								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getInt("num") %></a>
+								<input type="hidden" id="num" value="<%=result.getInt("num") %>">
 							</td>
 							<td>
 								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a>
@@ -113,7 +114,7 @@
 								{%>
 									<a href="data_modify.jsp?num=<%=result.getInt("num") %>">수정</a>
 									<a> | </a>
- 									<a href="/19831049_finalproject/jsp/board/data/data_deleteAction.jsp?num=<%=result.getString("num") %>">삭제</a>
+ 									<a href="javascript:void(0);" onclick="delete_click();">삭제</a>
 								<%
 								}
 								else

@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
 		<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
-		<title>경민대학교 대나무숲 : 프로젝트에 대하여...</title>
+		<title>경민대학교 대나무숲 : 문의하기</title>
 	</head>
 	<body>
 		<%

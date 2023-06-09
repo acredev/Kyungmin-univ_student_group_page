@@ -39,9 +39,9 @@
 				if (pwd.equals(db_user_pwd))
 				{%>
 					<script type="text/javascript">
-						window.close();
 						popupWindow = window.open("/19831049_finalproject/jsp/member/mypage/mypage.jsp", "_blank","resizeable","toolbar=no");
 						popupWindow.resizeTo(500,800);
+						window.close();
 					</script>
 				<%
 				}

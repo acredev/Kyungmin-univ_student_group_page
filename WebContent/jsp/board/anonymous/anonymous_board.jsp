@@ -5,18 +5,19 @@
 <%@ page  import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
-<title>경민대학교 대나무숲 : 메인</title>
-<style type="text/css">
-	a,a:hover{
-		color:#000000;
-		text-decoration:none;
-	}
-</style>
-</head>
-<body>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="/19831049_finalproject/css/bootstrap.css">
+	<link rel="icon" href="/19831049_finalproject/img/favicon.png" type="image/x-icon" sizes="16x16">
+	<title>경민대학교 대나무숲 : 익명게시판</title>
+	<style type="text/css">
+		a,a:hover{
+			color:#000000;
+			text-decoration:none;
+		}
+	</style>
+	</head>
+	<body>
 		<%
 		String user_id = null;
 		if (session.getAttribute("id") != null)
