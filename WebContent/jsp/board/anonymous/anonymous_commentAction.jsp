@@ -22,10 +22,12 @@ try
 		int writer = 0;
 	
 		// MySQL로 전송하기 위한 쿼리문인 insertQuery 문자열 선언 (현재 등록된 게시글의 갯수를 파악)
-		String insertQuery = "SELECT MAX(writer) from 19831049_finalproject.comment_anonymous";
+		String insertQuery = "SELECT MAX(writer) from 19831049_finalproject.comment_anonymous WHERE post_num=?";
 	
 		// SQL 쿼리문을 실행 (MySQL로 전송)하기 위한 객체 선언
 		PreparedStatement psmt = connection.prepareStatement(insertQuery);
+		
+		psmt.setString (1, post_num);
 	
 		// 조회된 결과물들을 저장하기 위한 ResultSet 객체 선언
 		ResultSet result = psmt.executeQuery();
