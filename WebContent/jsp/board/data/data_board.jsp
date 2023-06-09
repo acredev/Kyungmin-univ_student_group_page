@@ -97,16 +97,15 @@
 						<tr>
 							<td>
 								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getInt("num") %></a>
-								<input type="hidden" id="num" value="<%=result.getInt("num") %>">
 							</td>
 							<td>
 								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("title") %></a>
 							</td>
 							<td>
-								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("writer") %>
+								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getString("writer") %></a>
 							</td>
 							<td>
-								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getTimestamp("date") %>
+								<a href="data_read.jsp?num=<%=result.getInt("num") %>"><%=result.getTimestamp("date") %></a>
 							</td>
 							<td>
 								<%
@@ -114,7 +113,7 @@
 								{%>
 									<a href="data_modify.jsp?num=<%=result.getInt("num") %>">수정</a>
 									<a> | </a>
- 									<a href="javascript:void(0);" onclick="delete_click();">삭제</a>
+ 									<a href="javascript:void(window.open('data_delete_chk.jsp?num=<%=result.getInt("num") %>','_blank','width=500,height=500'))">삭제</a>
 								<%
 								}
 								else
@@ -139,7 +138,6 @@
 		}
 		%>
 		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="/19831049_finalproject/js/data_board.js"></script>
 		<script src="/19831049_finalproject/js/bootstrap.js"></script>
 		<script src="/19831049_finalproject/js/main.js"></script>
 	</body>
