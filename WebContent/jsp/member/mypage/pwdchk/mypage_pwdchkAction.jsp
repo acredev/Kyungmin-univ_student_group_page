@@ -38,11 +38,15 @@
 				
 				if (pwd.equals(db_user_pwd))
 				{%>
-					<script type="text/javascript">
-						popupWindow = window.open("/19831049_finalproject/jsp/member/mypage/mypage.jsp", "_blank","resizeable","toolbar=no");
-						popupWindow.resizeTo(500,800);
-						window.close();
-					</script>
+				<form name="mypage_pwdchkAction" action="/19831049_finalproject/jsp/member/mypage/mypage.jsp" method="post">
+						<script type="text/javascript">
+							document.mypage_pwdchkAction.submit();
+							window.resizeTo(500,800);
+							window.onresize=(_=>{
+								window.resizeTo(500,800);
+							})
+						</script>
+					</form>
 				<%
 				}
 				else

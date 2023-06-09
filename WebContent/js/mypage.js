@@ -105,3 +105,21 @@ function mypage_save()
 		alert("알 수 없는 오류가 발생했습니다.");
 	}
 }
+
+function member_remove_click()
+{
+	var id = document.getElementById("id");
+	
+	popupWindow = window.open("/19831049_finalproject/jsp/member/mypage/remove/member_remove_chk.jsp", "_blank","resizeable","toolbar=no");
+		popupWindow.resizeTo(500,850);
+		popupWindow.onresize=(_=>{
+			popupWindow.resizeTo(500,850);
+		})
+}
+
+function member_remove_post_delete_click()
+{
+	var id = document.getElementById("id");
+	
+	location.href="/19831049_finalproject/jsp/member/mypage/remove/member_remove_post_deleteAction.jsp?id=" + id.value;
+}

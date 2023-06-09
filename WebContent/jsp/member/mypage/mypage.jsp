@@ -117,6 +117,8 @@
 												<input type="hidden" id="isTelChange" name="isTelChange" value="no">
 												<input type="hidden" id="isEmailChange" name="isEmailChange" value="no">
 												<input type="button" class="btn btn-primary form-control" onclick="mypage_save()" value="변경정보 저장"></input>
+												<br><br>
+												<input type="button" class="btn btn-primary form-control" style="background-color: red;" onclick="member_remove_click()" value="회원 탈퇴"></input>
 											</div>
 										</form>
 									</div>
